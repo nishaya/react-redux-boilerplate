@@ -9,6 +9,10 @@ class IndexComponent extends Component {
     keyDown: PropTypes.func.isRequired,
   }
 
+  componentDidMount() {
+    document.addEventListener('keydown', event => this.props.keyDown(event.key))
+  }
+
   render() {
     return (<div>
       index
