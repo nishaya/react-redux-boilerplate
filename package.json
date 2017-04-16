@@ -5,6 +5,11 @@
   "repository": "git@github.com:nishaya/react-redux-boilerplate.git",
   "author": "nishaya <nishaya@users.noreply.github.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server",
+    "build": "NODE_ENV=production webpack",
+    "lint": "eslint . --ext .js,.jsx --cache --fix"
+  },
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -20,11 +25,15 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "config": "^1.25.1",
+    "css-loader": "^0.28.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.2"
   }
