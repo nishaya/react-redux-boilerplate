@@ -7,6 +7,7 @@ import InputActions from 'actions/input'
 class IndexComponent extends Component {
   static propTypes = {
     keyDown: PropTypes.func.isRequired,
+    pressedKeys: PropTypes.shape().isRequired,
   }
 
   componentDidMount() {
@@ -15,13 +16,13 @@ class IndexComponent extends Component {
 
   render() {
     return (<div>
-      index
+      Pressed Keys: {Object.keys(this.props.pressedKeys).join(', ')}
     </div>)
   }
 }
 
 const mapStateToProps = state => ({
-  pressedKeys: state.input.keyDown,
+  pressedKeys: state.input.pressedKeys,
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators(
