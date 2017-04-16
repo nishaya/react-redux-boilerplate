@@ -1,0 +1,8 @@
+{
+  "name": "react-redux-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nishaya/react-redux-boilerplate.git",
+  "author": "nishaya <nishaya@users.noreply.github.com>",
+  "license": "MIT"
+}
