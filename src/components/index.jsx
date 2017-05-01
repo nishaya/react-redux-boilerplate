@@ -14,8 +14,8 @@ class IndexComponent extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener('keydown', event => this.props.keyDown(event.key))
-    document.addEventListener('keyup', event => this.props.keyUp(event.key))
+    document.addEventListener('keydown', (event: KeyboardEvent) => this.props.keyDown(event.key))
+    document.addEventListener('keyup', (event: KeyboardEvent) => this.props.keyUp(event.key))
   }
 
   render() {
