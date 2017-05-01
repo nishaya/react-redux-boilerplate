@@ -1,3 +1,5 @@
+// @flow
+
 import { createAction } from 'redux-actions'
 import { INPUT_KEY_DOWN, INPUT_KEY_UP } from 'actions/action_types'
 
