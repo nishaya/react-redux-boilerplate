@@ -1,3 +1,5 @@
+// @flow
+
 import createReducer from 'utils/create_reducer'
 import { INPUT_KEY_DOWN, INPUT_KEY_UP } from 'actions/action_types'
 
