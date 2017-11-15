@@ -6,7 +6,7 @@ import reducers from 'reducers/index'
 
 export function buildStore() {
   const middlewares = process.env.NODE_ENV === 'development' ?
-  applyMiddleware(createLogger()) : applyMiddleware()
+    applyMiddleware(createLogger()) : applyMiddleware()
   return createStore(reducers, middlewares)
 }
 

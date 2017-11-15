@@ -19,11 +19,13 @@ class IndexComponent extends Component {
   }
 
   render() {
-    return (<div>
-      Pressed Keys: {
-        Object.keys(this.props.pressedKeys).filter(key => this.props.pressedKeys[key]).join(', ')
-      }
-    </div>)
+    return (
+      <div>
+        Pressed Keys: {
+          Object.keys(this.props.pressedKeys).filter(key => this.props.pressedKeys[key]).join(', ')
+        }
+      </div>
+    )
   }
 }
 

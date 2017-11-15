@@ -13,11 +13,13 @@ const root = document.getElementById('app')
 
 try {
   render(
-    (<Provider store={store}>
-      <div>
-        <IndexComponent />
-      </div>
-    </Provider>),
+    (
+      <Provider store={store}>
+        <div>
+          <IndexComponent />
+        </div>
+      </Provider>
+    ),
     root,
   )
 } catch (e) {
