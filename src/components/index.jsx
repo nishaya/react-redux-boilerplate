@@ -1,18 +1,17 @@
 // @flow
 
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import InputActions from 'actions/input'
 
-class IndexComponent extends Component {
-  static propTypes = {
-    keyDown: PropTypes.func.isRequired,
-    keyUp: PropTypes.func.isRequired,
-    pressedKeys: PropTypes.shape().isRequired,
-  }
+type Props = {
+  keyDown: (key: string) => any,
+  keyUp: (key: string) => any,
+  pressedKeys: {},
+}
 
+class IndexComponent extends Component<Props> {
   componentDidMount() {
     document.addEventListener('keydown', (event: KeyboardEvent) => this.props.keyDown(event.key))
     document.addEventListener('keyup', (event: KeyboardEvent) => this.props.keyUp(event.key))

@@ -11,17 +11,19 @@ import _applicationStyle from './application.scss'
 const store = buildStore()
 const root = document.getElementById('app')
 
-try {
-  render(
-    (
-      <Provider store={store}>
-        <div>
-          <IndexComponent />
-        </div>
-      </Provider>
-    ),
-    root,
-  )
-} catch (e) {
-  render(<RedBox error={e} />, root)
+if (root !== null) {
+  try {
+    render(
+      (
+        <Provider store={store}>
+          <div>
+            <IndexComponent />
+          </div>
+        </Provider>
+      ),
+      root,
+    )
+  } catch (e) {
+    render(<RedBox error={e} />, root)
+  }
 }
